@@ -1,5 +1,4 @@
 import { Eye } from "lucide-react";
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -57,12 +56,12 @@ function Login() {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="button"
+            <Link
+              to="/homepage"
               className="w-full rounded-xl bg-linear-to-r from-sky-500 to-blue-600 py-3.5 text-white font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-sky-500/3 active:scale-95"
-            >
+            > 
               Login
-            </button>
+            </Link>
           </form>
 
           {/* Footer Link */}
