@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./user.css";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { BsBagDash } from "react-icons/bs";
@@ -6,14 +6,13 @@ import { HiOutlineDocumentReport } from "react-icons/hi";
 import { GoGear } from "react-icons/go";
 import { IoIosLogOut } from "react-icons/io";
 
-
 const user = () => {
   return (
     <>
       <div className="sidebar">
         <h2 className=" font-bold text-3xl">Admin</h2>
 
-        <Link className="flex gap-3" to="/">
+        <NavLink className="flex gap-3" to="/dashboard">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -21,14 +20,15 @@ const user = () => {
               height="25"
               fill="currentColor"
               class="bi bi-house-door"
-              viewBox="0 0 16 16">
+              viewBox="0 0 16 16"
+            >
               <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
             </svg>
           </span>
           Dashboard
-        </Link>
+        </NavLink>
 
-        <Link to="/user" className="flex  gap-3">
+        <NavLink to="/user" className="flex  gap-3" end>
           {" "}
           <span>
             <svg
@@ -43,28 +43,30 @@ const user = () => {
             </svg>
           </span>
           User List
-        </Link>
+        </NavLink>
 
-        <Link className="flex items-center gap-3 " to="/product">
+        <NavLink className="flex items-center gap-3 " to="/product" end>
           <BsFillBoxSeamFill />
           Product
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/a" className="flex gap-3" end>
           <BsBagDash className="w-6 h-6 mb-7" />
           Order
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/s" className="flex gap-3" end>
           <HiOutlineDocumentReport className="w-6 h-6" />
           Sale Report
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/Setting" className="flex gap-3" end>
           <GoGear className="w-6 h-6" />
           Settings
-        </Link>
-        <Link to="" className="logout flex gap-3">
-          <IoIosLogOut className="w-6 h-6" />
-          Logout
-        </Link>
+        </NavLink>
+        <div className="logout">
+          <NavLink to="/Logout" className="flex gap-3" end>
+            <IoIosLogOut className="w-6 h-6" />
+            Logout
+          </NavLink>
+        </div>
       </div>
 
       <div className="content">
@@ -115,7 +117,6 @@ const user = () => {
 
                   <td>
                     <div className="user-info">
-                      
                       <span>Zozoz</span>
                     </div>
                   </td>

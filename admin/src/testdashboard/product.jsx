@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Product.css";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { BsBagDash } from "react-icons/bs";
@@ -12,7 +12,7 @@ function Product() {
       <div className="sidebar">
         <h2 className=" font-bold text-3xl">Admin</h2>
 
-        <Link className="flex gap-3" to="/">
+        <NavLink className="flex gap-3" to="/dashboard">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +26,9 @@ function Product() {
             </svg>
           </span>
           Dashboard
-        </Link>
+        </NavLink>
 
-        <Link to="/user" className="flex  gap-3">
+        <NavLink to="/user" className="flex  gap-3" end>
           {" "}
           <span>
             <svg
@@ -43,28 +43,30 @@ function Product() {
             </svg>
           </span>
           User List
-        </Link>
+        </NavLink>
 
-        <Link className="flex items-center gap-3 " to="/product">
+        <NavLink className="flex items-center gap-3 " to="/product" end>
           <BsFillBoxSeamFill />
           Product
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/a" className="flex gap-3" end>
           <BsBagDash className="w-6 h-6 mb-7" />
           Order
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/a" className="flex gap-3" end>
           <HiOutlineDocumentReport className="w-6 h-6" />
           Sale Report
-        </Link>
-        <Link to="" className="flex gap-3">
+        </NavLink>
+        <NavLink to="/a" className="flex gap-3" end>
           <GoGear className="w-6 h-6" />
           Settings
-        </Link>
-        <Link to="" className="logout flex gap-3">
-          <IoIosLogOut className="w-6 h-6" />
-          Logout
-        </Link>
+        </NavLink>
+        <div className="logout">
+          <NavLink to="/Logout" className="flex gap-3 "end>
+            <IoIosLogOut className="w-6 h-6" />
+            Logout
+          </NavLink>
+        </div>
       </div>
 
       <div className="content">
