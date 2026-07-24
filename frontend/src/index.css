@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
 .container {
-    padding: 3;
+  padding: 3;
+}
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --color-ink: #050816;
+  --color-panel: #0b1020;
+  --color-electric: #25a8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #050816;
+  color: #f8fafc;
+}
+::selection {
+  background: #1689e6;
+  color: white;
+}
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(78, 157, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 157, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.glass {
+  background: rgba(10, 16, 35, 0.72);
+  backdrop-filter: blur(16px);
 }
